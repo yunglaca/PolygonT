@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: polygontest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/polygontest 
+    ports:
+      - "8000:8000"  # Проброс порта 8000 из контейнера на хост
